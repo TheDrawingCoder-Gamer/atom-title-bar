@@ -1,10 +1,10 @@
 {
-  "name": "atom-title-ribbon",
+  "name": "atom-title-bar",
   "main": "./lib/atom-title-ribbon",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [],
-  "repository": "https://github.com/atom/atom-title-ribbon",
+  "description": "Adds a theme sensitive title bar to atom.",
+  "keywords": ["title-bar"],
+  "repository": "https://github.com/TheDrawingCoder-Gamer/atom-title-bar",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -22,9 +22,5 @@
     "globals": [
       "atom"
     ]
-  },
-  "scripts": {
-    "precss": "npx postcss ./styles-src -r -u precss",
-    "preset-env": "npx postcss ./styles-src -r -u postcss-preset-env"
   }
 }
