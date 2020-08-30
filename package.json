@@ -4,21 +4,27 @@
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "atom-title-ribbon:toggle"
-  },
   "repository": "https://github.com/atom/atom-title-ribbon",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "feather-icons": "^4.28.0",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "jsdoc": "~3.6.5",
+    "jsdoc-markdown-cli": "^2.0.0",
     "standard": "^14.3.4"
   },
   "standard": {
-    "globals": ["atom"]
+    "globals": [
+      "atom"
+    ]
+  },
+  "scripts": {
+    "precss": "npx postcss ./styles-src -r -u precss",
+    "preset-env": "npx postcss ./styles-src -r -u postcss-preset-env"
   }
 }

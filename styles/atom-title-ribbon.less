@@ -4,5 +4,104 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.atom-title-ribbon {
+@ribbon-height: 3.5vh;
+@ribbon-padding: 0.4vh;
+.atom-title-ribbon, .atr-title {
+  height: @ribbon-height;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  display: flex;
+  flex-direction: column;
+  color: @text-color;
+  background-color: @app-background-color;
+}
+.transition-background() {
+  transition-property: background-color;
+  transition-duration: 200ms;
+}
+.app-menu-label {
+  display: inline-block;
+  margin: @ribbon-padding 0.2vw;
+  padding: 0 0.2vw;
+  border-radius: 0.2vw;
+  justify-content: center;
+  line-height: @ribbon-height - (@ribbon-padding * 2);
+  position: relative;
+  .transition-background();
+  &:hover {
+    background-color: @background-color-highlight;
+  }
+}
+
+.control-wrap {
+  display: inline-block;
+  -webkit-app-region: no-drag;
+  right: 0;
+  position: absolute;
+  height: @ribbon-height;
+}
+.app-menu {
+  display: inline-block;
+  max-width: 30vw;
+  -webkit-app-region: no-drag;
+}
+.app-title {
+  align-self: center;
+  position: absolute;
+  line-height: @ribbon-height;
+}
+
+.ribbon-button() {
+  cursor: pointer;
+  width: 3.8vw;
+  height: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .transition-background();
+}
+.app-close,
+.app-min,
+.app-max {
+  .ribbon-button();
+}
+.app-close:hover {
+  background-color: @background-color-error;
+}
+.app-min:hover,
+.app-max:hover {
+  background-color: @background-color-highlight;
+}
+.menu-box {
+  display: none;
+  position: absolute;
+  background-color: @app-background-color;
+  box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.12), 0 0.0625rem 0.25rem rgba(0,0,0,0.24);
+  z-index: 10;
+}
+.sub-menu-child {
+  min-width: 15vw;
+  margin: 0.01vh 0;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    background-color: @background-color-highlight;
+  }
+}
+.sub-menu-keystroke {
+  align-self: flex-end;
+  .disabled();
+}
+.atom-title-ribbon hr {
+  margin: 0.1vh 0;
+}
+.has-sub:hover > .menu-box {
+  box-shadow: 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.12), 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.24);
+  display: block;
+  left: 15vw;
+}
+.disabled {
+  font-weight: normal;
+  color: @text-color-subtle;
+  text-shadow: none;
 }
