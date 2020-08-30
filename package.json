@@ -1,9 +1,11 @@
 {
   "name": "atom-title-bar",
   "main": "./lib/atom-title-ribbon",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Adds a theme sensitive title bar to atom.",
-  "keywords": ["title-bar"],
+  "keywords": [
+    "title-bar"
+  ],
   "repository": "https://github.com/TheDrawingCoder-Gamer/atom-title-bar",
   "license": "MIT",
   "engines": {
