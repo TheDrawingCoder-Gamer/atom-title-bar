@@ -1,6 +1,6 @@
 {
   "name": "atom-title-bar",
-  "main": "./lib/atom-title-ribbon",
+  "main": "./lib/atom-title-bar",
   "version": "0.1.0",
   "description": "Adds a theme sensitive title bar to atom.",
   "keywords": [
@@ -22,7 +22,14 @@
   },
   "standard": {
     "globals": [
-      "atom"
-    ]
+      "atom",
+      "waitsForPromise"
+    ],
+    "env": {
+      "node": true,
+      "jasmine": true,
+      "atomtest": true,
+      "browser": true
+    }
   }
 }

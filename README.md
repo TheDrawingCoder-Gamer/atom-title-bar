@@ -1,4 +1,4 @@
-# atom-title-ribbon package
+# atom-title-bar package
 
 A short description of your package.
 
