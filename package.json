@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "feather-icons": "^4.28.0",
-    "jquery": "^3.5.1",
-    "underscore-plus": "^1.7.0"
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "jsdoc": "~3.6.5",
