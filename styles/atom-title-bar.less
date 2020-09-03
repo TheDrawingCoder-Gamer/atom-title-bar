@@ -20,8 +20,11 @@
   transition-duration: 200ms;
 }
 .app-menu-label {
+  all: inherit; // Only overwrite properties as needed; I hate semantics
   display: inline-block;
   margin: @ribbon-padding 0.2vw;
+  border: none;
+  background-color: inherit;
   padding: 0 0.2vw;
   border-radius: 0.2vw;
   justify-content: center;
@@ -79,6 +82,7 @@
   width: auto;
 }
 .sub-menu-child {
+  all: unset;
   width: auto;
   margin: 0.01vh 0;
   display: flow-root;
@@ -98,7 +102,7 @@
   margin: 0.1vh 0;
 }
 .sub-menu-label {
-  margin-right: 6em;
+  margin-right: 10em;
 }
 .has-sub > .menu-box {
   box-shadow: 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.12), 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.24);
