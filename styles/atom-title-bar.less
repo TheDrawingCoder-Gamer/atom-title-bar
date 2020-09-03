@@ -20,8 +20,11 @@
   transition-duration: 200ms;
 }
 .app-menu-label {
+  all: inherit; // Only overwrite properties as needed; I hate semantics
   display: inline-block;
   margin: @ribbon-padding 0.2vw;
+  border: none;
+  background-color: inherit;
   padding: 0 0.2vw;
   border-radius: 0.2vw;
   justify-content: center;
@@ -52,7 +55,6 @@
 }
 
 .ribbon-button() {
-  cursor: pointer;
   width: 3.8vw;
   height: inherit;
   display: inline-flex;
@@ -73,32 +75,40 @@
   background-color: @background-color-highlight;
 }
 .menu-box {
-  display: none;
   position: absolute;
   background-color: @app-background-color;
   box-shadow: 0 0.0625rem 0.25rem rgba(0,0,0,0.12), 0 0.0625rem 0.25rem rgba(0,0,0,0.24);
   z-index: 10;
+  width: auto;
 }
 .sub-menu-child {
-  min-width: 15vw;
+  all: unset;
+  width: auto;
   margin: 0.01vh 0;
-  display: flex;
-  justify-content: space-between;
+  display: flow-root;
+  white-space: nowrap;
+  position: relative;
   &:hover {
     background-color: @background-color-highlight;
   }
 }
 .sub-menu-keystroke {
-  align-self: flex-end;
   .disabled();
+  display: inline;
+  position: absolute;
+  right: 0;
 }
 .atom-title-bar hr {
   margin: 0.1vh 0;
 }
-.has-sub:hover > .menu-box {
+.sub-menu-label {
+  margin-right: 10em;
+}
+.has-sub > .menu-box {
   box-shadow: 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.12), 0.125rem 0.0625rem 0.25rem rgba(0,0,0,0.24);
-  display: block;
-  left: 15vw;
+  left: 100%;
+  position: absolute;
+  top: 0;
 }
 .disabled {
   font-weight: normal;
