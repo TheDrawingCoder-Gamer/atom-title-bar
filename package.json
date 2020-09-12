@@ -1,7 +1,7 @@
 {
   "name": "atom-title-bar",
   "main": "./lib/atom-title-bar",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Adds a theme sensitive title bar to atom.",
   "keywords": [
     "title-bar"
